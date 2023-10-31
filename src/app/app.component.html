@@ -1,0 +1,49 @@
+Your Name {{firstName +" "+lastName |uppercase}}<br>
+
+Your Name {{firstName +" "+lastName |lowercase}}<br>
+
+<b>Your Name {{firstName +" "+lastName |slice:4}}</b><br>
+
+<b>Your Name {{firstName +" "+lastName |slice:4:12}}</b><br>
+
+join Date<b>{{joinDate|date}}</b><br>
+
+join Date<b>{{joinDate|date:'fullDate'}}</b><br>
+
+join Date<b>{{joinDate|date:'shortDate'}}</b><br>
+
+join Date<b>{{joinDate|date:'fullTime'}}</b><br>
+
+join Date<b>{{joinDate|date:'shortTime'}}</b><br>
+
+join Date<b>{{joinDate|date:'mm/yy/dd'}}</b><br>
+
+join Date<b>{{joinDate|date:'mm/yy/dd h:mi:ss am'}}</b><br>
+
+salary<b>{{salary |currency}}</b><br>
+
+salary<b>{{salary |currency:'USD'}}</b><br>
+
+salary<b>{{salary |currency:'INR'}}</b><br>
+
+Your salary<input type="number" [(ngModel)]="salary" /><br>
+
+currency list<br>
+
+<select [(ngModel)]="currencysymbol">
+
+  <option value="INR">INDIAN RUPEE</option>
+
+  <option value="USD">USD $</option>
+
+  <option value="GBP">British pound</option>
+
+  <option value="EUR">Euro</option>
+
+ 
+
+</select><br><br>
+
+Your salary in {{salary |currency:currencysymbol}}
+
+<router-outlet></router-outlet>
